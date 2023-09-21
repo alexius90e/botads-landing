@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 html {
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: $blue900;
   scroll-behavior: smooth;
 }
 
 body {
   position: relative;
   margin: 0;
-  font-family: 'Inter', sans-serif;
   background-color: $white;
-  min-height: 1000px;
 
   &.fixed {
     @include tablet {
@@ -32,7 +29,6 @@ textarea {
 }
 
 a {
-  color: $blue500;
   text-decoration: none;
 }
 
@@ -42,13 +38,11 @@ figure {
 
 h2,
 h3 {
-  color: $blue900;
   font-style: normal;
   font-weight: 700;
 }
 
 h2 {
-  margin: 0 0 48px;
   font-size: 40px;
   line-height: 48px;
 }
@@ -61,11 +55,9 @@ h3 {
 
 p {
   margin: 16px 0;
-  color: $grey800;
 }
 
 ul {
   margin: 16px 0;
-  color: $grey800;
   padding-left: 18px;
 }

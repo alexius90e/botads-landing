@@ -1,0 +1,22 @@
+.logo {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  &__text {
+    color: $black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 17px;
+  }
+}

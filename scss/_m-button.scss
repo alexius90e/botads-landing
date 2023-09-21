@@ -1,36 +1,3 @@
 .btn {
   border-radius: 32px;
-
-  &-primary {
-    color: $white;
-    background-color: $blue500;
-    border-color: $blue500;
-  }
-
-  &-secondary {
-    color: $blue500;
-    background-color: $blue100;
-    border-color: $blue100;
-
-    &:active,
-    &:hover,
-    &:checked {
-      color: $blue500;
-      background-color: $blue150;
-      border-color: $blue150;
-    }
-
-    &:focus,
-    &:focus:active {
-      color: $blue500;
-      background-color: $blue150;
-      border-color: $blue150;
-      box-shadow: 0 0 0 0.25rem rgba($color: $blue500, $alpha: 0.3);
-    }
-  }
-
-  &-link {
-    color: $blue500;
-    text-decoration: none;
-  }
 }
