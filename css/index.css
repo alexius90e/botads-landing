@@ -218,3 +218,53 @@ ul {
   background-repeat: no-repeat;
   background-position: left center;
 }
+
+.buy-ads {
+  padding: 64px 0 80px;
+}
+@media (max-width: 576px) {
+  .buy-ads {
+    padding: 40px 0;
+  }
+}
+.buy-ads__title {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  text-align: center;
+}
+.buy-ads__title > span {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(9.49%, #feb019), color-stop(92.83%, #fed519));
+  background-image: linear-gradient(90deg, #feb019 9.49%, #fed519 92.83%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.buy-ads__prompt {
+  margin: 0 0 24px;
+  color: #51606f;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  text-align: center;
+}
+.buy-ads__language-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 440px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 4px 16px;
+  border-radius: 52px;
+  border: 1px solid #e2e2e5;
+  background: #ffffff;
+}

@@ -1,0 +1,46 @@
+.buy-ads {
+  padding: 64px 0 80px;
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__title {
+    max-width: 480px;
+    margin: 0 auto 32px;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    text-align: center;
+
+    & > span {
+      background-image: linear-gradient(90deg, #feb019 9.49%, #fed519 92.83%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+
+  &__prompt {
+    margin: 0 0 24px;
+    color: $material-theme-sys-light-secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  &__language-filter {
+    display: flex;
+    align-items: center;
+    max-width: 440px;
+    height: 72px;
+    margin: 0 auto;
+    padding: 4px 16px;
+    border-radius: 52px;
+    border: 1px solid #e2e2e5;
+    background: $white;
+  }
+}
