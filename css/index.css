@@ -268,3 +268,49 @@ ul {
   border: 1px solid #e2e2e5;
   background: #ffffff;
 }
+
+.filter .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+.filter__title {
+  margin: 0;
+  color: #1a1c1e;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.filter__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  max-width: 100%;
+  overflow: auto;
+}
+.filter__item {
+  padding: 10px 42px 10px 12px;
+  color: #1a1c1e;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  background-image: url(../assets/icons/arrow_drop_down_24px.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: right 16px center;
+}

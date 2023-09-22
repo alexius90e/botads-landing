@@ -1,0 +1,39 @@
+.filter {
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    color: #1a1c1e;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  &__item {
+    padding: 10px 42px 10px 12px;
+    color: #1a1c1e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    background-image: url(../assets/icons/arrow_drop_down_24px.svg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: right 16px center;
+  }
+}
