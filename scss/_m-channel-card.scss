@@ -1,0 +1,213 @@
+.channel-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 16px 32px;
+  border-bottom: 1px solid #dee3eb;
+
+  @include tablet {
+    flex-wrap: wrap;
+    padding: 24px 0;
+  }
+
+  &__avatar {
+    flex: 0 0 56px;
+
+    & img {
+      width: 56px;
+      height: 56px;
+      border-radius: 56px;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    flex: 0 0 232px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 232px;
+
+    @include laptop {
+      flex: 0 0 200px;
+      max-width: 200px;
+    }
+
+    @include tablet {
+      flex: 1 0 calc(100% - 80px);
+      max-width: calc(100% - 80px);
+    }
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    min-height: 22px;
+
+    &_new {
+      padding: 0 8px;
+      color: #ff541f;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 150%;
+      border-radius: 8px;
+      border: 1px solid #ff541f;
+    }
+
+    &_hot {
+      padding-left: 22px;
+      color: #f56843;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      background-image: url(../assets/icons/fire.svg);
+      background-repeat: no-repeat;
+      background-size: 22px 22px;
+      background-position: left center;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    & a {
+      color: #006497;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-decoration: none;
+    }
+  }
+
+  &__info {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__users,
+  &__price,
+  &__date {
+    flex: 1 1 116px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 116px;
+
+    @include tablet {
+      flex: 1 0 auto;
+      max-width: none;
+    }
+  }
+
+  &__users,
+  &__date {
+    @include tablet {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    & span {
+      display: none;
+      color: #51606f;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 150%;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__users {
+    flex: 1 1 147px;
+    order: 0;
+    max-width: 147px;
+
+    @include laptop {
+      flex: 1 1 116px;
+    }
+
+    @include tablet {
+      max-width: none;
+    }
+  }
+
+  &__price {
+    order: 1;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-current {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 150%;
+
+      @include tablet {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+      }
+    }
+
+    &-no-discont {
+      color: #51606f;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 120%;
+      text-decoration: line-through;
+
+      @include tablet {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__date {
+  }
+
+  &__button {
+  }
+}
