@@ -24,6 +24,10 @@
     gap: 16px;
     max-width: 100%;
     overflow: auto;
+
+    @include tablet {
+      gap: 8px;
+    }
   }
 
   &__item {

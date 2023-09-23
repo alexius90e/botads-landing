@@ -7,4 +7,46 @@
     margin: 40px 0 64px;
   }
 
+  &__button {
+    &_load-more {
+      @keyframes loading {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      &:hover {
+        background-color: #f4c900;
+      }
+
+      &:active {
+        background-color: #e8bf02;
+      }
+
+      &.loading {
+        padding-right: 62px;
+        padding-left: 62px;
+        background-color: #fed519;
+
+        & span {
+          display: none;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          height: 18px;
+          width: 18px;
+          background-image: url(../assets/icons/loading.svg);
+          background-repeat: no-repeat;
+          background-size: 18px 18px;
+          background-position: center;
+          animation: 1s linear 0s normal none infinite running loading;
+        }
+      }
+    }
+  }
 }

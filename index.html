@@ -20,7 +20,7 @@
 
         <div class="header__language">
           <div class="custom-select" data-value="en">
-            <select class="form-select">
+            <select class="form-select" id="language">
               <option value="ru">RU</option>
               <option value="en">EN</option>
               <option value="de">DE</option>
@@ -56,8 +56,18 @@
 
       <section class="search-bar">
         <div class="container">
-          <div class="search-bar__input">
-            <input type="text" placeholder="Поиск по имени..." />
+          <div class="search-bar__wrapper">
+            <div class="search-bar__input">
+              <input type="search" id="search" autocomplete="off" placeholder="Поиск по имени..." />
+            </div>
+
+            <div class="search-bar__sort">
+              <div class="search-bar__sort-item direct">Пользователи</div>
+              <div class="search-bar__sort-item reverse">Цена</div>
+              <div class="search-bar__sort-item">Свободно</div>
+            </div>
+
+            <div class="search-bar__divider"></div>
           </div>
         </div>
       </section>
@@ -314,7 +324,9 @@
           </div>
 
           <div class="channels__buttons">
-            <button class="button button-outlined">Загрузить ещё</button>
+            <button class="button button-outlined channels__button_load-more">
+              <span>Загрузить ещё</span>
+            </button>
           </div>
         </div>
       </section>
@@ -325,7 +337,7 @@
         <a class="footer__help" href="./">Помощь</a>
 
         <div class="custom-select" data-value="rub">
-          <select class="form-select">
+          <select class="form-select" id="currency">
             <option value="rub">₽ RUB</option>
             <option value="usd">$ USD</option>
             <option value="eur">€ EUR</option>
