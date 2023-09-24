@@ -33,14 +33,241 @@
   }
 
   &__language-filter {
-    display: flex;
-    align-items: center;
     max-width: 440px;
-    height: 72px;
     margin: 0 auto;
-    padding: 4px 16px;
-    border-radius: 52px;
-    border: 1px solid #e2e2e5;
-    background: $white;
+
+    & .custom-select {
+      & .select-selected {
+        position: relative;
+        padding: 24px 0;
+        padding-right: 60px;
+        padding-left: 68px;
+        border-radius: 52px;
+        border: 1px solid #e2e2e5;
+        background-color: $white;
+        background-position: right 20px center;
+        transition: $baseTransition;
+
+        &:hover {
+          border: 1px solid #72787e;
+          background-color: #edeef1;
+        }
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 28px;
+          content: '';
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-repeat: no-repeat;
+          background-size: 24px;
+          background-position: center;
+          transform: translateY(-50%);
+        }
+      }
+
+      &[data-value='ru'] .select-selected::before {
+        background-image: url(../assets/flags/russia.svg);
+      }
+      &[data-value='de'] .select-selected::before {
+        background-image: url(../assets/flags/germany.svg);
+      }
+      &[data-value='en'] .select-selected::before {
+        background-image: url(../assets/flags/unitedkingdom.svg);
+      }
+      &[data-value='fr'] .select-selected::before {
+        background-image: url(../assets/flags/france.svg);
+      }
+      &[data-value='ch'] .select-selected::before {
+        background-image: url(../assets/flags/china.svg);
+      }
+      &[data-value='it'] .select-selected::before {
+        background-image: url(../assets/flags/italy.svg);
+      }
+      &[data-value='es'] .select-selected::before {
+        background-image: url(../assets/flags/spain.svg);
+      }
+      &[data-value='pl'] .select-selected::before {
+        background-image: url(../assets/flags/poland.svg);
+      }
+      &[data-value='ua'] .select-selected::before {
+        background-image: url(../assets/flags/ukraine.svg);
+      }
+      &[data-value='ro'] .select-selected::before {
+        background-image: url(../assets/flags/romania.svg);
+      }
+      &[data-value='nl'] .select-selected::before {
+        background-image: url(../assets/flags/netherlands.svg);
+      }
+      &[data-value='rs'] .select-selected::before {
+        background-image: url(../assets/flags/serbia.svg);
+      }
+      &[data-value='tr'] .select-selected::before {
+        background-image: url(../assets/flags/turkey.svg);
+      }
+      &[data-value='gr'] .select-selected::before {
+        background-image: url(../assets/flags/greece.svg);
+      }
+      &[data-value='se'] .select-selected::before {
+        background-image: url(../assets/flags/sweden.svg);
+      }
+      &[data-value='cz'] .select-selected::before {
+        background-image: url(../assets/flags/czechrepublic.svg);
+      }
+      &[data-value='pt'] .select-selected::before {
+        background-image: url(../assets/flags/portugal.svg);
+      }
+      &[data-value='bg'] .select-selected::before {
+        background-image: url(../assets/flags/bulgaria.svg);
+      }
+      &[data-value='al'] .select-selected::before {
+        background-image: url(../assets/flags/albania.svg);
+      }
+      &[data-value='hr'] .select-selected::before {
+        background-image: url(../assets/flags/croatia.svg);
+      }
+      &[data-value='dk'] .select-selected::before {
+        background-image: url(../assets/flags/denmark.svg);
+      }
+      &[data-value='fl'] .select-selected::before {
+        background-image: url(../assets/flags/finland.svg);
+      }
+      &[data-value='no'] .select-selected::before {
+        background-image: url(../assets/flags/norway.svg);
+      }
+      &[data-value='sa'] .select-selected::before {
+        background-image: url(../assets/flags/saudiarabia.svg);
+      }
+      &[data-value='am'] .select-selected::before {
+        background-image: url(../assets/flags/armenia.svg);
+      }
+      &[data-value='az'] .select-selected::before {
+        background-image: url(../assets/flags/azerbaijan.svg);
+      }
+      &[data-value='ge'] .select-selected::before {
+        background-image: url(../assets/flags/georgia.svg);
+      }
+      &[data-value='kz'] .select-selected::before {
+        background-image: url(../assets/flags/kazakhstan.svg);
+      }
+      &[data-value='uz'] .select-selected::before {
+        background-image: url(../assets/flags/uzbekistan.svg);
+      }
+
+      & .select-items {
+        top: 0;
+        left: 0;
+        right: 0;
+        max-height: 480px;
+        border: 1px solid #e2e2e5;
+        border-radius: 32px;
+
+        &::-webkit-scrollbar {
+          width: 4px;
+          background-color: rgba($color: #000000, $alpha: 0);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+      }
+
+      & .select-item {
+        padding: 24px 40px 24px 68px;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: left 28px center;
+
+        &_ru {
+          background-image: url(../assets/flags/russia.svg);
+        }
+        &_de {
+          background-image: url(../assets/flags/germany.svg);
+        }
+        &_en {
+          background-image: url(../assets/flags/unitedkingdom.svg);
+        }
+        &_fr {
+          background-image: url(../assets/flags/france.svg);
+        }
+        &_ch {
+          background-image: url(../assets/flags/china.svg);
+        }
+        &_it {
+          background-image: url(../assets/flags/italy.svg);
+        }
+        &_es {
+          background-image: url(../assets/flags/spain.svg);
+        }
+        &_pl {
+          background-image: url(../assets/flags/poland.svg);
+        }
+        &_ua {
+          background-image: url(../assets/flags/ukraine.svg);
+        }
+        &_ro {
+          background-image: url(../assets/flags/romania.svg);
+        }
+        &_nl {
+          background-image: url(../assets/flags/netherlands.svg);
+        }
+        &_rs {
+          background-image: url(../assets/flags/serbia.svg);
+        }
+        &_tr {
+          background-image: url(../assets/flags/turkey.svg);
+        }
+        &_gr {
+          background-image: url(../assets/flags/greece.svg);
+        }
+        &_se {
+          background-image: url(../assets/flags/sweden.svg);
+        }
+        &_cz {
+          background-image: url(../assets/flags/czechrepublic.svg);
+        }
+        &_pt {
+          background-image: url(../assets/flags/portugal.svg);
+        }
+        &_bg {
+          background-image: url(../assets/flags/bulgaria.svg);
+        }
+        &_al {
+          background-image: url(../assets/flags/albania.svg);
+        }
+        &_hr {
+          background-image: url(../assets/flags/croatia.svg);
+        }
+        &_dk {
+          background-image: url(../assets/flags/denmark.svg);
+        }
+        &_fl {
+          background-image: url(../assets/flags/finland.svg);
+        }
+        &_no {
+          background-image: url(../assets/flags/norway.svg);
+        }
+        &_sa {
+          background-image: url(../assets/flags/saudiarabia.svg);
+        }
+        &_am {
+          background-image: url(../assets/flags/armenia.svg);
+        }
+        &_az {
+          background-image: url(../assets/flags/azerbaijan.svg);
+        }
+        &_ge {
+          background-image: url(../assets/flags/georgia.svg);
+        }
+        &_kz {
+          background-image: url(../assets/flags/kazakhstan.svg);
+        }
+        &_uz {
+          background-image: url(../assets/flags/uzbekistan.svg);
+        }
+      }
+    }
   }
 }

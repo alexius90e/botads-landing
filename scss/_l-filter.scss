@@ -1,6 +1,6 @@
 .filter {
   margin-bottom: 24px;
-  
+
   & .container {
     display: flex;
     justify-content: space-between;
@@ -37,9 +37,15 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+    border-radius: 32px;
     background-image: url(../assets/icons/arrow_drop_down_24px.svg);
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: right 16px center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
   }
 }

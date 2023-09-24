@@ -578,19 +578,234 @@ ul {
   text-align: center;
 }
 .buy-ads__language-filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 440px;
-  height: 72px;
   margin: 0 auto;
-  padding: 4px 16px;
+}
+.buy-ads__language-filter .custom-select .select-selected {
+  position: relative;
+  padding: 24px 0;
+  padding-right: 60px;
+  padding-left: 68px;
   border-radius: 52px;
   border: 1px solid #e2e2e5;
-  background: #ffffff;
+  background-color: #ffffff;
+  background-position: right 20px center;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+}
+.buy-ads__language-filter .custom-select .select-selected:hover {
+  border: 1px solid #72787e;
+  background-color: #edeef1;
+}
+.buy-ads__language-filter .custom-select .select-selected::before {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.buy-ads__language-filter .custom-select[data-value=ru] .select-selected::before {
+  background-image: url(../assets/flags/russia.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=de] .select-selected::before {
+  background-image: url(../assets/flags/germany.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=en] .select-selected::before {
+  background-image: url(../assets/flags/unitedkingdom.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=fr] .select-selected::before {
+  background-image: url(../assets/flags/france.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=ch] .select-selected::before {
+  background-image: url(../assets/flags/china.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=it] .select-selected::before {
+  background-image: url(../assets/flags/italy.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=es] .select-selected::before {
+  background-image: url(../assets/flags/spain.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=pl] .select-selected::before {
+  background-image: url(../assets/flags/poland.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=ua] .select-selected::before {
+  background-image: url(../assets/flags/ukraine.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=ro] .select-selected::before {
+  background-image: url(../assets/flags/romania.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=nl] .select-selected::before {
+  background-image: url(../assets/flags/netherlands.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=rs] .select-selected::before {
+  background-image: url(../assets/flags/serbia.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=tr] .select-selected::before {
+  background-image: url(../assets/flags/turkey.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=gr] .select-selected::before {
+  background-image: url(../assets/flags/greece.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=se] .select-selected::before {
+  background-image: url(../assets/flags/sweden.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=cz] .select-selected::before {
+  background-image: url(../assets/flags/czechrepublic.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=pt] .select-selected::before {
+  background-image: url(../assets/flags/portugal.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=bg] .select-selected::before {
+  background-image: url(../assets/flags/bulgaria.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=al] .select-selected::before {
+  background-image: url(../assets/flags/albania.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=hr] .select-selected::before {
+  background-image: url(../assets/flags/croatia.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=dk] .select-selected::before {
+  background-image: url(../assets/flags/denmark.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=fl] .select-selected::before {
+  background-image: url(../assets/flags/finland.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=no] .select-selected::before {
+  background-image: url(../assets/flags/norway.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=sa] .select-selected::before {
+  background-image: url(../assets/flags/saudiarabia.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=am] .select-selected::before {
+  background-image: url(../assets/flags/armenia.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=az] .select-selected::before {
+  background-image: url(../assets/flags/azerbaijan.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=ge] .select-selected::before {
+  background-image: url(../assets/flags/georgia.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=kz] .select-selected::before {
+  background-image: url(../assets/flags/kazakhstan.svg);
+}
+.buy-ads__language-filter .custom-select[data-value=uz] .select-selected::before {
+  background-image: url(../assets/flags/uzbekistan.svg);
+}
+.buy-ads__language-filter .custom-select .select-items {
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 480px;
+  border: 1px solid #e2e2e5;
+  border-radius: 32px;
+}
+.buy-ads__language-filter .custom-select .select-items::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.buy-ads__language-filter .custom-select .select-items::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.buy-ads__language-filter .custom-select .select-item {
+  padding: 24px 40px 24px 68px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: left 28px center;
+}
+.buy-ads__language-filter .custom-select .select-item_ru {
+  background-image: url(../assets/flags/russia.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_de {
+  background-image: url(../assets/flags/germany.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_en {
+  background-image: url(../assets/flags/unitedkingdom.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_fr {
+  background-image: url(../assets/flags/france.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_ch {
+  background-image: url(../assets/flags/china.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_it {
+  background-image: url(../assets/flags/italy.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_es {
+  background-image: url(../assets/flags/spain.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_pl {
+  background-image: url(../assets/flags/poland.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_ua {
+  background-image: url(../assets/flags/ukraine.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_ro {
+  background-image: url(../assets/flags/romania.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_nl {
+  background-image: url(../assets/flags/netherlands.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_rs {
+  background-image: url(../assets/flags/serbia.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_tr {
+  background-image: url(../assets/flags/turkey.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_gr {
+  background-image: url(../assets/flags/greece.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_se {
+  background-image: url(../assets/flags/sweden.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_cz {
+  background-image: url(../assets/flags/czechrepublic.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_pt {
+  background-image: url(../assets/flags/portugal.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_bg {
+  background-image: url(../assets/flags/bulgaria.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_al {
+  background-image: url(../assets/flags/albania.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_hr {
+  background-image: url(../assets/flags/croatia.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_dk {
+  background-image: url(../assets/flags/denmark.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_fl {
+  background-image: url(../assets/flags/finland.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_no {
+  background-image: url(../assets/flags/norway.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_sa {
+  background-image: url(../assets/flags/saudiarabia.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_am {
+  background-image: url(../assets/flags/armenia.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_az {
+  background-image: url(../assets/flags/azerbaijan.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_ge {
+  background-image: url(../assets/flags/georgia.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_kz {
+  background-image: url(../assets/flags/kazakhstan.svg);
+}
+.buy-ads__language-filter .custom-select .select-item_uz {
+  background-image: url(../assets/flags/uzbekistan.svg);
 }
 
 .filter {
@@ -641,10 +856,15 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  border-radius: 32px;
   background-image: url(../assets/icons/arrow_drop_down_24px.svg);
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: right 16px center;
+  cursor: pointer;
+}
+.filter__item:hover {
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 576px) {
