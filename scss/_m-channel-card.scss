@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
-  padding: 16px 32px;
+  min-height: 73px;
+  padding: 12px 26px 10px 32px;
   border-bottom: 1px solid #dee3eb;
 
   @include tablet {
@@ -206,7 +207,7 @@
   }
 
   &__date {
-    
+    order: 2;
   }
 
   &__button {

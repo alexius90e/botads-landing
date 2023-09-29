@@ -23,7 +23,7 @@
   }
 
   &__prompt {
-    margin: 0 0 24px;
+    margin: 0 0 22px;
     color: $material-theme-sys-light-secondary;
     font-size: 16px;
     font-style: normal;
@@ -33,7 +33,7 @@
   }
 
   &__language-filter {
-    max-width: 440px;
+    max-width: 464px;
     margin: 0 auto;
 
     & .custom-select {
@@ -44,6 +44,10 @@
         padding-left: 68px;
         border-radius: 52px;
         border: 1px solid #e2e2e5;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%;
         background-color: $white;
         background-position: right 20px center;
         transition: $baseTransition;
@@ -163,6 +167,10 @@
         max-height: 480px;
         border: 1px solid #e2e2e5;
         border-radius: 32px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%;
 
         &::-webkit-scrollbar {
           width: 4px;

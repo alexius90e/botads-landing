@@ -1,5 +1,5 @@
 .footer {
-  padding: 12px 0;
+  padding: 12px 0 12px;
   border-top: 1px solid #dee3eb;
   background: $white;
 
@@ -26,6 +26,12 @@
 
   & .custom-select {
     padding: 12px;
+
+    & .select-selected {
+      padding: 0 30px 0 0;
+      background-size: 18px;
+      background-position: right 4px center;
+    }
 
     & .select-items {
       top: auto;
