@@ -25,7 +25,7 @@ a,
 button,
 input,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -486,6 +486,147 @@ ul {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100px;
           flex: 0 0 100px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.modal.hide {
+  display: none;
+}
+.modal__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.32);
+}
+.modal__content {
+  padding: 24px;
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+.modal__close {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  background-image: url(../assets/icons/close_24px.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  cursor: pointer;
+}
+.modal__close:hover {
+  background-color: #edeef1;
+}
+.modal__close:active {
+  background-color: #d7d7d7;
+}
+
+.price-modal {
+  position: relative;
+}
+.price-modal .modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.price-modal__header {
+  padding: 10px 64px 10px 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.price-modal__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.price-modal__label {
+  position: relative;
+}
+.price-modal__label-text {
+  position: absolute;
+  left: 12px;
+  top: -8px;
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #ffffff;
+}
+.price-modal__input {
+  display: inline-block;
+  max-width: 128px;
+  padding: 8px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #72787e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+.price-modal__input::-webkit-outer-spin-button, .price-modal__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-modal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 8px;
+}
+.price-modal__button {
+  padding: 10px 12px;
+  border: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  background-color: white;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+}
+.price-modal__button:hover {
+  background-color: #edeef1;
+}
+.price-modal__button:active {
+  background-color: #d7d7d7;
 }
 
 .header {

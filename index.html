@@ -80,10 +80,10 @@
           <h3 class="filter__title">Рассылка</h3>
 
           <div class="filter__items">
-            <div class="filter__item">Цена</div>
-            <div class="filter__item">Дата</div>
-            <div class="filter__item">Рекомендуемые</div>
-            <div class="filter__item">Пользователи</div>
+            <div class="filter__item" id="priceButton">Цена</div>
+            <div class="filter__item" id="dateButton">Дата</div>
+            <div class="filter__item" id="recommendButton">Рекомендуемые</div>
+            <div class="filter__item" id="usersButton">Пользователи</div>
           </div>
         </div>
       </section>
@@ -379,5 +379,34 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal hide" id="priceModal">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="price-modal">
+            <div class="price-modal__header">Цена</div>
+
+            <div class="price-modal__body">
+              <label class="price-modal__label">
+                <span class="price-modal__label-text">От</span>
+                <input class="price-modal__input" type="number" id="priceMin" />
+              </label>
+
+              <label class="price-modal__label">
+                <span class="price-modal__label-text">До</span>
+                <input class="price-modal__input" type="number" id="priceMax" />
+              </label>
+            </div>
+
+            <div class="price-modal__footer">
+              <button class="price-modal__button price-modal__button_reset">Сбросить</button>
+              <button class="price-modal__button price-modal__button_apply">Применить</button>
+            </div>
+
+            <button class="modal__close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
