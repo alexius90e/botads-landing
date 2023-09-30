@@ -4,6 +4,10 @@ customSelects.forEach((customSelect) => {
   const isLanguageSelect = customSelect.parentNode.classList.contains('language');
   const selectElem = customSelect.querySelector('select');
   const options = selectElem.options;
+
+  const selectOverlay = document.createElement('div');
+  selectOverlay.setAttribute('class', 'select-overlay select-hide');
+
   const selectSelected = document.createElement('div');
   selectSelected.classList.add('select-selected');
 
@@ -45,38 +49,24 @@ customSelects.forEach((customSelect) => {
     });
   });
 
-  customSelect.append(selectSelected, selectItems);
+  customSelect.append(selectSelected, selectItems, selectOverlay);
 
   selectSelected.addEventListener('click', function (e) {
     e.stopPropagation();
-    closeAllSelect(this);
+    closeAllSelect();
+    selectOverlay.classList.toggle('select-hide');
     selectItems.classList.toggle('select-hide');
   });
 });
 
-function closeAllSelect(elmnt) {
-  var x,
-    y,
-    i,
-    xl,
-    yl,
-    arrNo = [];
-  x = document.getElementsByClassName('select-items');
-  y = document.getElementsByClassName('select-selected');
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i);
-    } else {
-      y[i].classList.remove('select-arrow-active');
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add('select-hide');
-    }
-  }
+function closeAllSelect() {
+  const selectOverlayElements = document.querySelectorAll('.select-overlay');
+  const selectItemsElements = document.querySelectorAll('.select-items');
+  const selectSelectedElements = document.querySelectorAll('.select-selected');
+
+  selectSelectedElements.forEach((element) => element.classList.remove('select-arrow-active'));
+  selectItemsElements.forEach((element) => element.classList.add('select-hide'));
+  selectOverlayElements.forEach((element) => element.classList.add('select-hide'));
 }
 
 document.addEventListener('click', closeAllSelect);

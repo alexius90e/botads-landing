@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
 html {
   color: #000000;
   font-size: 1rem;
@@ -329,6 +330,7 @@ ul {
   background-position: left center;
 }
 .channel-card__name {
+  font-family: "Inter", "Open sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -344,6 +346,7 @@ ul {
 }
 .channel-card__link a {
   color: #006497;
+  font-family: "Inter", "Open sans", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -371,6 +374,7 @@ ul {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 116px;
           flex: 1 1 116px;
+  font-family: "Inter", "Open sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -588,6 +592,7 @@ ul {
 .buy-ads__prompt {
   margin: 0 0 22px;
   color: #51606f;
+  font-family: "Inter", "Open sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -598,6 +603,9 @@ ul {
   max-width: 464px;
   margin: 0 auto;
 }
+.buy-ads__language-filter .custom-select {
+  position: static;
+}
 .buy-ads__language-filter .custom-select .select-selected {
   position: relative;
   padding: 24px 0;
@@ -605,6 +613,7 @@ ul {
   padding-left: 68px;
   border-radius: 52px;
   border: 1px solid #e2e2e5;
+  font-family: "Inter", "Open sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -720,17 +729,66 @@ ul {
 .buy-ads__language-filter .custom-select[data-value=uz] .select-selected::before {
   background-image: url(../assets/flags/uzbekistan.svg);
 }
-.buy-ads__language-filter .custom-select .select-items {
+.buy-ads__language-filter .custom-select .select-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  max-height: 480px;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.buy-ads__language-filter .custom-select .select-overlay.select-hide {
+  display: none;
+}
+@-webkit-keyframes showLanguage {
+  0% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes showLanguage {
+  0% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.buy-ads__language-filter .custom-select .select-items {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 180px);
+  height: 100%;
+  width: 464px;
   border: 1px solid #e2e2e5;
   border-radius: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", "Open sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-timing-function: cubic-bezier(0.1, 0.5, 1, 1);
+          animation-timing-function: cubic-bezier(0.1, 0.5, 1, 1);
+  -webkit-animation-name: showLanguage;
+          animation-name: showLanguage;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 .buy-ads__language-filter .custom-select .select-items::-webkit-scrollbar {
   width: 4px;
@@ -905,7 +963,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
-  padding: 8px 26px 8px 32px;
+  padding: 13px 26px 10px 32px;
   border-bottom: 1px solid #c2c7ce;
 }
 @media (max-width: 768px) {
@@ -976,8 +1034,8 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  padding: 16px 0 10px;
+  gap: 2px;
+  padding: 1px 0;
   max-width: 116px;
   color: #42474e;
   font-size: 14px;
@@ -1012,8 +1070,9 @@ ul {
 }
 .search-bar__sort-item::after {
   content: "";
-  height: 24px;
-  width: 24px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
   background-image: url(../assets/icons/arrow_forward_24px.svg);
   background-repeat: no-repeat;
   background-size: 18px;
@@ -1026,10 +1085,14 @@ ul {
   transition: transform ease-in-out 0.2s;
   transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
 }
+.search-bar__sort-item:hover::after {
+  background-color: rgba(66, 71, 78, 0.08);
+}
 .search-bar__sort-item.reverse::after {
   content: "";
-  height: 24px;
-  width: 24px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
   background-image: url(../assets/icons/arrow_forward_24px.svg);
   background-repeat: no-repeat;
   background-size: 18px;

@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    padding: 8px 26px 8px 32px;
+    padding: 13px 26px 10px 32px;
     border-bottom: 1px solid #c2c7ce;
 
     @include tablet {
@@ -57,8 +57,8 @@
       flex: 1 1 116px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 16px 0 10px;
+      gap: 2px;
+      padding: 1px 0;
       max-width: 116px;
       color: #42474e;
       font-size: 14px;
@@ -83,8 +83,9 @@
 
       &::after {
         content: '';
-        height: 24px;
-        width: 24px;
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
         background-image: url(../assets/icons/arrow_forward_24px.svg);
         background-repeat: no-repeat;
         background-size: 18px;
@@ -93,11 +94,16 @@
         transition: transform ease-in-out 0.2s;
       }
 
+      &:hover::after {
+        background-color: rgba(66, 71, 78, 0.08);
+      }
+
       &.reverse {
         &::after {
           content: '';
-          height: 24px;
-          width: 24px;
+          height: 40px;
+          width: 40px;
+          border-radius: 40px;
           background-image: url(../assets/icons/arrow_forward_24px.svg);
           background-repeat: no-repeat;
           background-size: 18px;

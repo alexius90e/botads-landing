@@ -78,6 +78,7 @@
   }
 
   &__name {
+    font-family: 'Inter', 'Open sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -94,6 +95,7 @@
 
     & a {
       color: #006497;
+      font-family: 'Inter', 'Open sans', sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -117,6 +119,7 @@
   &__price,
   &__date {
     flex: 1 1 116px;
+    font-family: 'Inter', 'Open sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
