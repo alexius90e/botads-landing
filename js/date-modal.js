@@ -73,7 +73,8 @@ function renderDayItems(date, isEmpty) {
   return new Array(numberOfDays).fill(null).map((_, index) => {
     const dayItemElement = document.createElement('div');
     const dayItemInnerElement = document.createElement('div');
-    const dayDate = new Date(date.getFullYear(), date.getMonth(), index + 1);
+    const dayDate = new Date(`${date.getMonth() + 1}-${index + 1}-${date.getFullYear()}`);
+    console.log(dayDate);
     const currentDate = new Date();
     const isCurrent =
       dayDate.getFullYear() === currentDate.getFullYear() &&
