@@ -33,7 +33,6 @@ function resetActiveDay() {
 }
 
 function renderCalendar(wrapper) {
-  const currentDate = new Date();
   const currentMonth = new Date().getMonth();
   const currentFullYear = new Date().getFullYear();
   const monthElements = new Array(3).fill(null).map((_, index) => {
