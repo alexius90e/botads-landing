@@ -1,7 +1,29 @@
+#dateModal {
+  & .modal__content {
+    padding: 12px;
+    border-radius: 28px;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      box-sizing: border-box;
+      border-radius: 0;
+    }
+  }
+}
+
 .date-modal {
   max-width: 350px;
 
+  @include mobile {
+    max-width: none;
+  }
+
   &__heading {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,6 +33,13 @@
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 
   &__clear {
@@ -54,13 +83,18 @@
     height: 416px;
     overflow: auto;
 
+    @include mobile {
+      height: calc(100vh - 120px);
+    }
+
     &::-webkit-scrollbar {
       width: 6px;
       background-color: $white;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #72787e;
+      
+      background-color: rgba($color: #72787e, $alpha: 0.15) ;
       border-radius: 4px;
     }
 

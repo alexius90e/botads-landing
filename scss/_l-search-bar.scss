@@ -17,7 +17,7 @@
   }
 
   &__input {
-    flex: 0 0 calc(232px + 56px + 24px);
+    flex: 0 0 310px;
 
     @include laptop {
       flex: 0 0 calc(200px + 56px + 24px);
@@ -57,7 +57,7 @@
       flex: 1 1 116px;
       display: flex;
       align-items: center;
-      gap: 2px;
+      gap: 4px;
       padding: 1px 0;
       max-width: 116px;
       color: #42474e;
