@@ -81,10 +81,43 @@
           <h3 class="filter__title">Рассылка</h3>
 
           <div class="filter__items">
+            <button class="filter__search"></button>
+
             <div class="filter__item" id="priceButton">Цена</div>
             <div class="filter__item" id="dateButton">Дата</div>
-            <div class="filter__item" id="recommendButton">Рекомендуемые</div>
+            <div class="filter__item filter__item_select" id="recommendButton">
+              <div class="custom-select" data-value="0">
+                <select class="form-select" id="language">
+                  <option value="0">Рекомендуемые</option>
+                  <option value="1">Дорогие рассылки</option>
+                  <option value="2">Дешевые рассылки</option>
+                  <option value="3">Много пользователей</option>
+                  <option value="4">Мало пользователей</option>
+                  <option value="5">Новые</option>
+                </select>
+              </div>
+            </div>
             <div class="filter__item" id="usersButton">Пользователи</div>
+          </div>
+
+          <div class="filter__search-bar">
+            <div class="filter__search-bar-top">
+              <button class="filter__search-bar-back"></button>
+              <input class="filter__search-bar-input" type="text" placeholder="Поиск по имени..." />
+            </div>
+
+            <div class="filter__search-bar-body">
+              <div class="filter__search-bar-item">Tiktok Downloader telegram chanel easd</div>
+              <div class="filter__search-bar-item">Tiktok Downloader telegram</div>
+              <div class="filter__search-bar-item">Tiktok Downloader telegram</div>
+              <div class="filter__search-bar-item">Tiktok Downloader telegram</div>
+              <div class="filter__search-bar-item">Tiktok Downloader telegram</div>
+              <div class="filter__search-bar-item">Tiktok Downloader telegram</div>
+            </div>
+
+            <div class="filter__search-bar-bottom">
+              <button class="button">Применить</button>
+            </div>
           </div>
         </div>
       </section>
